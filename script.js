@@ -1,10 +1,8 @@
 var username = document.getElementById("username")
-var email = document.getElementById("email")
 var password = document.getElementById("password")
 var cpassword = document.getElementById("cpassword")
 var form = document.getElementById("form")
 var isUsername = false
-var isEmail = false
 var isPassword = false
 var isCPassword = false
 
@@ -14,14 +12,13 @@ form.addEventListener('submit', (e) => {
         e.preventDefault()
     }
 
-    if(isUsername && isEmail && isPassword && isCPassword) {
+    if(isUsername && isPassword && isCPassword) {
             window.location.assign("image.html")
     }
 })
 
 function validateInputs() {
     var usernameValue = username.value.trim()
-    var emailValue = email.value.trim()
     var passwordValue = password.value.trim()
     var cpasswordValue = cpassword.value.trim()
 
@@ -34,21 +31,6 @@ function validateInputs() {
     else {
         isUsername = true
         setSuccess(username)
-    }
-
-    if (emailValue === '') {
-        isEmail = false
-        setError(email, '* Please enter your mailId')
-    }
-
-    else if (!validateEmail(emailValue)) {
-        isEmail = false
-        setError(email, '* Please enter a valid email address')
-    }
-
-    else {
-        isEmail = true
-        setSuccess(email)
     }
 
     if (passwordValue === '') {
@@ -99,11 +81,4 @@ function setSuccess(element) {
     inputs.classList.remove('error')
 }
 
-const validateEmail = (email) => {
-    return String(email)
-        .toLowerCase()
-        .match(
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
-};
 

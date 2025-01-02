@@ -18,13 +18,13 @@ body {
 
 h1{
     text-align: center;
-    color: rgb(153, 19, 153);
+    color: rgb(77, 19, 153) ;
 }
 
 #form button{
-    background-color: rgb(153, 19, 153);
+    background-color: rgb(77, 19, 153) ;
     color: white;
-    border: solid rgb(153, 19, 153) 1px;
+    border: solid rgb(77, 19, 153)  1px;
     padding: 10px;
     border-radius: 20px;
     margin: 20px 0px ;
@@ -45,7 +45,7 @@ h1{
     margin-top: 10px;
     padding: 5px;
     outline: none;
-    border: solid rgb(153, 19, 153) 2px ;
+    border: solid rgb(77, 19, 153) 2px ;
 }
 
 .inputs .error{
@@ -55,7 +55,7 @@ h1{
 }
 
 .inputs.success input{
-    border-color: rgb(103, 243, 103);
+    border-color: rgb(77, 19, 153) ;
 }
 
 .inputs.error input{
